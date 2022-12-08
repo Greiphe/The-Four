@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset='utf-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <title>Questionário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <link rel='stylesheet' type='text/css' media='screen' href="../css/style.css"/>
+    <link rel="icon" type="A4 Paper" href="../assets/img/logo_ei-for-icon-black.png"/>
+    <script src="js/script.js"></script>
+  <style>
+      @import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+</style>
+</head>
+<body>
+<div class="header">
+      <div class="header-left">
+        <img src="../assets/img/logo ei-for.png" width="140px" height="140px" title="A4 Paper">
+        <div class="header-left-2">
+          <div class="header-search">
+            <div class="header-icon">
+              <img src="../assets/icon/search.svg" width="20px" height="20px">
+              <input class="input-header" type="text" title="Pesquisar" width="50px" height="20px" placeholder="Pesquise...">
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="header-right">
+      <div class="header-right-2">
+        <button  class="bottun" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Entrar</button>
+        <a href="#"> <img onclick="document.getElementById('id02').style.display='block'" src="../assets/icon/exclamation-circle.png" width="35px" height="35px" style="color: aliceblue;" title="Informação"></a>
+        <a href="#"> <img onclick="document.getElementById('id03').style.display='block'" src="../assets/icon/question-circle.png" width="35px" height="35px" title="Ajuda"></a>   
+        <div class="span" >
+          <a href="#"><img onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="display: block; padding-bottom: 10px;" src="../assets/icon/user-circle.svg" width="35px" height="35px"title="Login"></a>
+			    <span class="spanLogado" id="userlogged">Usúario</span>
+        </div>
+    </div>
+      <div class="header-right-flag">
+        <div class="header-up">
+        <a href="../index.html"><img class="flagPt" src="../assets/img/br.png" title="PT-BR"/></a>
+      </div>
+      <div class="header-down">
+        <a href="../ingles/index.html"><img class="flagEn" src="../assets/img/en-cinza.png" title="EN-US"/></a>
+      </div>
+      </div>
+    </div>
+</div>
+
+
+<aside class="menu">  
+  <div class="sidenav">
+    <ul>
+      <li class="dropdown-btn-1">
+        <a href="../index.html"><span class="span-drop">Ínicio</span></a>
+      </li>
+      <li class="dropdown-btn-3" style="background-color:#ad8755;color: #fff; width: 162px;">
+        <a href="quiz.html" id="contato"><span class="span-drop">Questionário</span></a> 
+      </li>
+      <li class="dropdown-btn"style="width: 162px;"><span class="span-drop">Sobre Nós</span> 
+          <img class="drop" src="../assets/icon/caret-down.svg"/>
+        </li>
+        <div class="dropdown-container">
+          <li class="dropdown-btn-sub">
+            <a href="sobre.html"style="width: 162px;"> <span class="span-drop">Nossa Ideia</span></a>
+          </li>
+          <li class="dropdown-btn-sub">
+            <a href="o-time.html"style="width: 162px;"> <span class="span-drop">A Equipe</span></a>
+          </li>
+        </div>
+        <li class="dropdown-btn-4" >
+          <a href="contato.html" ><span class="span-drop">Contato</span></a>
+        </li>
+      </div>
+    </ul>
+</aside>
+ <!--codigo do login-->
+ <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content"  id="limpar1" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Login  <img src="../assets/icon/user-circle.svg" width="30px" height="30px"></h1>
+      <p class="titulo-login">Preencha esse formulário para criar a sua conta!</p>
+      <hr>
+      <label for="text"><b>Nome</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required>
+      <label for="text"><b>Matrícula</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu CG" name="text" required>
+      <label for="psw"><b>Senha</b></label>
+      <input class="input-login" type="password" placeholder="Digite sua senha" name="psw" required>
+      <label>
+        <input class="input-login" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar Senha
+      </label><br>
+      <div class="clearfix">
+        <button id="signbtn" type="button" class="signupbtnLogin">Logar</button>
+        <button  type="button" class="signupbtnCadastro" onclick="document.getElementById('id04').style.display='block'">Cadastrar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--formulario de cadastro-->
+<div id="id04" class="modalFormulario">
+  <form class="modal-contentFormulario" id="limpar2" action="#">
+    <div class="container">
+    <h1 class="titulo-login">Formulário de Cadastro <img src="../assets/icon/address-card.svg" width="30px" height="30px"></h1>
+    <p class="titulo-login">Preencha o Formulário</p>
+    <hr>
+    <label for="text"><b>Nome:</b></label><br>
+    <input class="input-formulario" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required><br>
+    <label for="text"><b>Matrícula:</b></label><br>
+    <input class="input-formulario" type="text" placeholder="Digite seu CG" name="text" required><br>
+    <label for="psw"><b>Senha:</b></label><br>
+    <input class="input-formulario" type="password" placeholder="Digite sua senha" name="psw" required><br>
+    <label for="birthday" width="60px" height="40px;"><b>Birthday:</b></label>
+    <input type="date" id="birthday" name="birthday">
+    <label for="cars"style="margin-left: 80px;"><b>Curso Técnico:</b></label>
+    <select name="cars" id="cars">
+      <option value="volvo"> </option>
+      <option value="volvo"> 1º Informática pra internet</option>
+      <option value="saab">2º Informática pra internet</option>
+      <option value="opel">3º Informática pra internet</option>
+    </select><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="clearfix">
+      <button id="botao2" type="button" class="signupbtn">Enviar</button>
+    </div>
+  </div>
+  </form>
+</div>
+<!--i-->
+<div id="id02" class="modalI">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-contentI" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Informação <img src="../assets/icon/exclamation-circle.svg" width="25px" height="25px"> </h1>
+      <p class="titulo-login">Mapa do Site</p>
+      <hr>
+        <ul class="modal-informacao">
+          <li>Home</li>
+          <li>Questionário</li>
+          <li>Sobre Nós
+            <ul style="margin-left: 20px;">  
+              <li>Nossa ideia</li>
+              <li>A equipe</li>
+            </ul>
+          </li>
+          <li>Contato</li>
+        </ul>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn-enviar">Ok Intendi</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--duvida-->
+<div id="id03" class="modalInfo">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-contentInfo" id="limpar" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Qual é a sua dúvidas?</h1>
+      <p class="titulo-login">Conte-nos sobre a sua opinião!</p>
+      <hr>
+      <label for="text"><b>Nome</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required>
+      <label for="text"><b>Senha</b></label>
+      <textarea class="textarea-duvida" name="textarea" rows="8" cols="50" placeholder="Digite a sua duvida" style="background-color: #f1f1f1;"></textarea>
+      <div class="clearfix">
+        <button id="botao" type="button" class="signupbtn"onclick="document.getElementById('id03').style.display='none'" class="cancelbtn-enviar">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>
+   <!--fim dos modais-->
+<main>
+  <article>
+     <!--todas as perguntas do quiz-->
+    <div class="article-quiz-Perguntas">
+    <div class="centro5">
+      <div class="Image">
+        <img src="../assets/img/bambu.jpg" alt="Pergunta 1" width="540px" height="240px">
+      </div>
+      </div>
+    <div class="centro6">
+      <div class="pergunta">
+        <p><b>1.</b> Qual o material retirado das árvores é utilizado na fabricação de papel?</p>
+      </div>
+    </div>
+    <div class="centro7">
+      <div class="ab">
+        <div class="opc">
+        <input type="radio" id="q1a" name="q1" value="a">
+        <label for="q1a"><b>A.</b> Polpa de Maracujá</label>
+        </div>
+        <div class="opc3">
+          <input type="radio" id="q1b" name="q1" value="b">
+          <label for="q1a"><b>B.</b> Polpa de Tomate</label>
+        </div>
+      </div>
+      <div class="cd">
+        <div class="opc2">
+          <input type="radio" id="q1c" name="q1" value="c">
+          <label for="q1a"><b>C.</b> Polpa de Celulose</label>
+        </div>
+        <div class="opc4">
+          <input type="radio" id="q1d" name="q1" value="d">
+          <label for="q1a"><b>D.</b> Polpa de Fruta</label>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--pergunta2-->
+    <div class="article-quiz-pergunta2">
+    <div class="centro5">
+      <div class="Image">
+        <img src="../assets/img/arvoretech.jpg" alt="Pergunta 1" width="540px" height="240px">
+      </div>
+    </div>
+    <div class="centro6">
+      <div class="pergunta">
+        <p><b>2.</b> Qual é a matéria-prima do papel?</p>
+      </div>
+    </div>
+    <div class="centro7">
+      <div class="ab">
+        <div class="opc3">
+          <input type="radio" id="q2a" name="q2" value="a">
+          <label for="q2a"><b>A.</b> Celulite</label>
+        </div>
+        <div class="opc4">
+          <input type="radio" id="q2a" name="q2" value="b">
+		      <label for="q2a"><b>B.</b> Sucralose</label>
+        </div>
+      </div>
+      <div class="cd">
+        <div class="opc">
+          <input type="radio" id="q2a" name="q2" value="c">
+		      <label for="q2a"><b>C.</b> Célula</label>
+        </div>
+        <div class="opc2">
+          <input type="radio" id="q2a" name="q2" value="d">
+		      <label for="q2a"><b>D.</b> Celulose</label>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--pergunta3-->
+    <div class="article-quiz-pergunta3">
+    <div class="centro5">
+      <div class="Image">
+        <img src="../assets/img/robotree.png" alt="Pergunta 1" width="540px" height="240px">
+      </div>
+    </div>
+    <div class="centro6">
+      <div class="pergunta">
+        <p><b>3.</b> O papel é feito de qual madeira especificamente?</p>
+      </div>
+    </div>
+    <div class="centro7">
+      <div class="ab">
+        <div class="opc4">
+          <input type="radio" id="q3a" name="q3" value="a">
+		      <label for="q3a"><b>A.</b> Bétula</label>
+        </div>
+        <div class="opc2">
+          <input type="radio" id="q3a" name="q3" value="b">
+		      <label for="q3b"><b>B.</b> Eucalipto</label>
+        </div>
+      </div>
+      <div class="cd">
+        <div class="opc">
+          <input type="radio" id="q3a" name="q3" value="c">
+		      <label for="q3c"><b>C.</b> Ipê</label>
+        </div>
+        <div class="opc3">
+          <input type="radio" id="q3a" name="q3" value="d">
+		      <label for="q3d"><b>D.</b> Cerejeira</label>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--pergunta4-->
+    <div class="article-quiz-pergunta4">
+      <div class="centro5">
+        <div class="Image">
+          <img src="../assets/img/arvorepapel.png" alt="Pergunta 1" width="540px" height="240px">
+        </div>
+      </div>
+      <div class="centro6">
+        <div class="pergunta">
+          <p><b>4.</b> Uma tonelada de papel equivale a quantas árvores?</p>
+        </div>
+      </div>
+      <div class="centro7">
+        <div class="ab">
+          <div class="opc">
+          <input type="radio" id="q4a" name="q4" value="a">
+		      <label for="q4a"><b>A.</b> 11 Árvores</label>
+          </div>
+          <div class="opc3">
+            <input type="radio" id="q4b" name="q4" value="b">
+		        <label for="q4b"><b>B.</b> 9 Árvores</label>
+          </div>
+        </div>
+        <div class="cd">
+          <div class="opc4">
+            <input type="radio" id="q4c" name="q4" value="c">
+		        <label for="q4c"><b>C.</b> 12 Árvores</label>
+          </div>
+          <div class="opc2">
+            <input type="radio" id="q4d" name="q4" value="d">
+		        <label for="q4d"><b>D.</b> 10 Árvores</label>
+          </div>
+        </div>
+      </div>
+      <div class="centro8">
+        <div class="prx1">
+          <div class="proximo">
+            <input type="submit" id="corrigir" name="Corrigir"> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vazio">
+      .
+    </div>
+  </article>
+</main>
+<!--footer-->
+  <footer>
+    <p class="footerText">&copy; 2022 Todos os Direitos Reservados.</p>
+  </footer>
+  <!--esse é o script do sidebar dropdown-->
+  <script>
+
+	// login
+	var modal = document.getElementById('id01');
+	modal.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	 document.getElementById('signbtn').onclick = function (){
+		var user = document.getElementById('nameuser').value;
+		document.getElementById('userlogged').textContent = user;
+		modal.style.display = "none";
+    document.getElementById("limpar1").reset();
+	}
+
+//informação
+  var modalI = document.getElementById('id02');
+	modalI.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalI) {
+		modalI.style.display = "none";
+	  }
+	}
+
+  //duvida
+  var modalInfo = document.getElementById('id03');
+	modalInfo.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalInfo) {
+		modalInfo.style.display = "none";
+    document.getElementById("limpar").reset();
+	  }
+    var botao1 = document.getElementById('botao');
+    botao1.onclick = function(){
+    if (event.target == modalInfo) {
+		modalInfo.style.display = "none";
+	  }
+    alert("A sua duvida foi enviada com sucesso, Nossa equipe entrara em contato");
+    document.getElementById("limpar").reset();
+  }
+
+	}
+
+//formulario de cadastro
+  var  modalFormulario = document.getElementById('id04');
+	modalFormulario.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalFormulario) {
+      modalFormulario.style.display = "none";
+	  }
+    var botao2 = document.getElementById('botao2');
+    botao2.onclick = function(){
+      if (event.target == modalFormulario) {
+      modalFormulario.style.display = "none";
+	  }
+    alert("Cadastro enviado com sucesso!");
+    document.getElementById("limpar2").reset();
+  }
+	}
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+    
+    // verificação das respostas
+    const gabarito = {
+			"q1": "c",
+			"q2": "d",
+      "q3": "b",
+      "q4": "a",
+		};
+
+		document.getElementById("corrigir").addEventListener("click", function () {
+		  event.preventDefault();
+
+		  let contador = 0;
+
+		  for (var i = 1; i <= 4; i++) {
+			console.log("Questão: ", i)
+
+			var selecionada = document.querySelector('input[name="q' + i + '"]:checked').value;
+			console.log("Escolha do Usuário: ", selecionada);
+
+			var resposta_correta = gabarito["q" + i];
+			console.log("Resposta Correta: ", resposta_correta);
+
+			if (selecionada == resposta_correta) {
+				contador += 1;
+			}
+		  }
+      var media = (contador*2.5);
+    alert("Respostas Corretas: " + " " + contador);
+    alert("Sua media é de"+ " " + media);
+		});		
+    </script>
+</div>
+</div>
+</body>
+</html>

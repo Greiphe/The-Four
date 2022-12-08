@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset='utf-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <title>Quiz</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <link rel='stylesheet' type='text/css' media='screen' href="../css/style.css"/>
+    <link rel="icon" type="A4 Paper" href="../assets/img/logo_ei-for-icon-black.png"/>
+    <script src="../js/script.js"></script>
+  <style>
+      @import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+</style>
+</head>
+<body>
+<div class="header">
+      <div class="header-left">
+        <img src="../assets/img/logo ei-for.png" width="140px" height="140px" title="A4 Paper">
+        <div class="header-left-2">
+          <div class="header-search">
+            <div class="header-icon">
+              <img src="../assets/icon/search.svg" width="20px" height="20px">
+              <input class="input-header" type="text" title="Pesquisar" width="50px" height="20px" placeholder="Pesquise...">
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="header-right">
+      <div class="header-right-2">
+        <button  class="bottun" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <a href="#"> <img onclick="document.getElementById('id02').style.display='block'" src="../assets/icon/exclamation-circle.png" width="35px" height="35px" style="color: aliceblue;" title="Informação"></a>
+        <a href="#"> <img onclick="document.getElementById('id03').style.display='block'" src="../assets/icon/question-circle.png" width="35px" height="35px" title="Ajuda"></a>   
+        <div class="span" >
+          <a href="#"><img onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="display: block; padding-bottom: 10px;" src="../assets/icon/user-circle.svg" width="35px" height="35px"title="Login"></a>
+			    <span class="spanLogado" id="userlogged">User</span>
+        </div>
+    </div>
+      <div class="header-right-flag">
+        <div class="header-up">
+        <a href="../index.html"><img class="flagPt" src="../assets/img/br-cinza.png" title="PT-BR"/></a>
+      </div>
+      <div class="header-down">
+        <a href="../ingles/index.html"><img class="flagEn" src="../assets/img/en.png" title="EN-US"/></a>
+      </div>
+      </div>
+    </div>
+</div>
+<aside class="menu">
+    <div class="sidenav">
+      <ul>
+        <li class="dropdown-btn-1">
+          <a href="index.html"><span class="span-drop">Home</span></a>
+        </li>
+        <li class="dropdown-btn-3" style="background-color:#ad8755;color: #fff; width: 162px;">
+          <a id="inicio" href="quiz.html"><span class="span-drop">Quiz</span></a> 
+        </li>
+        <li class="dropdown-btn"style="width: 162px;"><span class="span-drop">About Us</span> 
+            <img class="drop" src="../assets/icon/caret-down.svg"/>
+          </li>
+          <div class="dropdown-container">
+            <li class="dropdown-btn-sub">
+              <a href="about.html"style="width: 162px;"> <span class="span-drop">Our Idea</span></a>
+            </li>
+            <li class="dropdown-btn-sub">
+              <a href="the-team.html"style="width: 162px;"> <span class="span-drop">The Team</span></a>
+            </li>
+          </div>
+          <li class="dropdown-btn-4">
+            <a  href="contact.html"><span class="span-drop">Contact</span></a>
+          </li>
+        </div>
+      </ul>
+</aside>
+ <!--codigo do login-->
+ <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content"  id="limpar1" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Login  <img src="../assets/icon/user-circle.svg" width="30px" height="30px"></h1>
+      <p class="titulo-login">Fill out this form to create your account!</p>
+      <hr>
+      <label for="text"><b>Name</b></label>
+      <input class="input-login" type="text" placeholder="Type your Name" name="text" id="nameuser" required>
+      <label for="text"><b>CG</b></label>
+      <input class="input-login" type="text" placeholder="Type your CG" name="text" required>
+      <label for="psw"><b>Password</b></label>
+      <input class="input-login" type="password" placeholder="Type your Password" name="psw" required>
+      <label>
+        <input class="input-login" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember Password
+      </label><br>
+      <div class="clearfix">
+        <button id="signbtn" type="button" class="signupbtnLogin">login</button>
+        <button  type="button" class="signupbtnCadastro" onclick="document.getElementById('id04').style.display='block'">Register</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--formulario de cadastro-->
+<div id="id04" class="modalFormulario">
+  <form class="modal-contentFormulario" id="limpar2" action="#">
+    <div class="container">
+    <h1 class="titulo-login">Registration Form <img src="../assets/icon/address-card.svg" width="30px" height="30px"></h1>
+    <p class="titulo-login">Fill the form</p>
+    <hr>
+    <label for="text"><b>Name</b></label><br>
+    <input class="input-formulario" type="text" placeholder="Type your Name" name="text" id="nameuser" required><br>
+    <label for="text"><b>CG</b></label><br>
+    <input class="input-formulario" type="text" placeholder="Type your CG" name="text" required><br>
+    <label for="psw"><b>Password</b></label><br>
+    <input class="input-formulario" type="password" placeholder="Type your Password" name="psw" required><br>
+    <label for="birthday" width="60px" height="40px;"><b>Birthday:</b></label>
+    <input class="aniver" type="date" id="birthday" name="birthday">
+    <label for="cars"style="margin-left: 80px;"><b>Technical Course</b></label>
+    <select name="cars" id="cars">
+      <option value="volvo"> </option>
+      <option value="volvo"> 1º Computing for Internet</option>
+      <option value="saab">2º Computing for Internet</option>
+      <option value="opel">3º Computing for Internet</option>
+    </select><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="clearfix">
+      <button id="botao2" type="button" class="signupbtn">Submit</button>
+    </div>
+  </div>
+  </form>
+</div>
+<!--i-->
+<div id="id02" class="modalI">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-contentI" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Information <img src="../assets/icon/exclamation-circle.svg" width="25px" height="25px"> </h1>
+      <p class="titulo-login">Site Map</p>
+      <hr>
+        <ul class="modal-informacao">
+          <li>Home</li>
+          <li>Quiz</li>
+          <li>About Us
+            <ul style="margin-left: 20px;">  
+              <li>Our Idea</li>
+              <li>The Team</li>
+            </ul>
+          </li>
+          <li>Contact</li>
+        </ul>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn-enviar">Ok I understood</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--duvida-->
+<div id="id03" class="modalInfo">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-contentInfo" id="limpar" action="#">
+    <div class="container">
+      <h1 class="titulo-login">what is your doubt?</h1>
+      <p class="titulo-login">Tell us about your opinion!</p>
+      <hr>
+      <label for="text"><b>Name</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required>
+      <label for="text"><b>Password</b></label>
+      <textarea class="textarea-duvida" name="textarea" rows="8" cols="50" placeholder="Digite a sua duvida" style="background-color: #f1f1f1;"></textarea>
+      <div class="clearfix">
+        <button id="botao" type="button" class="signupbtn"onclick="document.getElementById('id03').style.display='none'" class="cancelbtn-enviar">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+   <!--fim dos modais-->
+
+   <main>
+    <article>
+      <div class="article-quiz">
+      <!--TODO O CONTEUDO COLOCAR AQUI DENTRO DO ARTICLE!!!!-->
+      <div class="centro3">
+        <h1>Quiz</h1>
+      </div>
+      <div class="centro4">
+      <div class="jogo">
+        <div class="barra">
+            <div class="barra2">
+              <input class="input-login-quiz-1" type="text" placeholder="Name" name="text" id="nameuser" required>
+            </div>
+        </div>
+        <div class="barra">
+            <div class="barra2">
+              <input class="input-login-quiz-2" type="text" placeholder="CG" name="text" required>
+      
+            </div>
+        </div>
+        <div class="barra">
+            <div class="barra2">
+              <input class="input-login-quiz-3" type="text" placeholder="Technical Course" name="text" required>
+            
+            </div>
+        </div>
+      </div>
+      <div class="play">
+        <a href="quiz-question.html">Play</a>
+      </div>
+      </div>
+    </div>
+        </article>
+  </main>
+<!--footer-->
+  <footer>
+    <p class="footerText">&copy; 2022 All rights reserved.</p>
+  </footer>
+  <script>
+
+
+	// login
+	var modal = document.getElementById('id01');
+	modal.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	 document.getElementById('signbtn').onclick = function (){
+		var user = document.getElementById('nameuser').value;
+		document.getElementById('userlogged').textContent = user;
+		modal.style.display = "none";
+    document.getElementById("limpar1").reset();
+	}
+
+//informação
+  var modalI = document.getElementById('id02');
+	modalI.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalI) {
+		modalI.style.display = "none";
+	  }
+	}
+
+  //duvida
+  var modalInfo = document.getElementById('id03');
+	modalInfo.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalInfo) {
+		modalInfo.style.display = "none";
+    document.getElementById("limpar").reset();
+	  }
+    var botao1 = document.getElementById('botao');
+    botao1.onclick = function(){
+    if (event.target == modalInfo) {
+		modalInfo.style.display = "none";
+	  }
+    alert("Your inquiry has been sent successfully, our team will contact you");
+    document.getElementById("limpar").reset();
+  }
+
+	}
+
+//formulario de cadastro
+  var  modalFormulario = document.getElementById('id04');
+	modalFormulario.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalFormulario) {
+      modalFormulario.style.display = "none";
+	  }
+    var botao2 = document.getElementById('botao2');
+    botao2.onclick = function(){
+      if (event.target == modalFormulario) {
+      modalFormulario.style.display = "none";
+	  }
+    alert("Registration sent successfully!");
+    document.getElementById("limpar2").reset();
+  }
+	}
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+
+    </script>
+</div>
+</div>
+</body>
+</html>

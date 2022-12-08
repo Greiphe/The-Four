@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset='utf-8'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <title>Urgente</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <link rel='stylesheet' type='text/css' media='screen' href="../css/style.css"/>
+    <link rel="icon" type="A4 Paper" href="../assets/img/logo_ei-for-icon-black.png"/>
+    <script src="js/script.js"></script>
+  <style>
+      @import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+</style>
+</head>
+<body>
+<div class="header">
+      <div class="header-left">
+        <img src="../assets/img/logo ei-for.png" width="140px" height="140px" title="A4 Paper">
+        <div class="header-left-2">
+          <div class="header-search">
+            <div class="header-icon">
+              <img src="../assets/icon/search.svg" width="20px" height="20px">
+              <input class="input-header" type="text" title="Pesquisar" width="50px" height="20px" placeholder="Pesquise...">
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="header-right">
+      <div class="header-right-2">
+        <button  class="bottun" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Entrar</button>
+        <a href="#"> <img onclick="document.getElementById('id02').style.display='block'" src="../assets/icon/exclamation-circle.png" width="35px" height="35px" style="color: aliceblue;" title="Informação"></a>
+        <a href="#"> <img onclick="document.getElementById('id03').style.display='block'" src="../assets/icon/question-circle.png" width="35px" height="35px" title="Ajuda"></a>   
+        <div class="span" >
+          <a href="#"><img onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="display: block; padding-bottom: 10px;" src="../assets/icon/user-circle.svg" width="35px" height="35px"title="Login"></a>
+			    <span class="spanLogado" id="userlogged">Usúario</span>
+        </div>
+    </div>
+      <div class="header-right-flag">
+        <div class="header-up">
+        <a href="../index.html"><img class="flagPt" src="../assets/img/br.png" title="PT-BR"/></a>
+      </div>
+      <div class="header-down">
+        <a href="../ingles/index.html"><img class="flagEn" src="../assets/img/en-cinza.png" title="EN-US"/></a>
+      </div>
+      </div>
+    </div>
+</div>
+
+
+<aside class="menu">  
+  <div class="sidenav">
+    <ul>
+      <li class="dropdown-btn-1"  style="background-color:#ad8755;color: #fff; width: 162px;">
+        <a  id="inicio" href="../index.html"><span class="span-drop">Ínicio</span></a>
+      </li>
+      <li class="dropdown-btn-3">
+        <a href="quiz.html"><span class="span-drop">Questionário</span></a> 
+      </li>
+      <li class="dropdown-btn"style="width: 162px;"><span class="span-drop">Sobre Nós</span> 
+          <img class="drop" src="../assets/icon/caret-down.svg"/>
+        </li>
+        <div class="dropdown-container">
+          <li class="dropdown-btn-sub">
+            <a href="sobre.html"style="width: 162px;"> <span class="span-drop">Nossa Ideia</span></a>
+          </li>
+          <li class="dropdown-btn-sub">
+            <a href="o-time.html"style="width: 162px;"> <span class="span-drop">A Equipe</span></a>
+          </li>
+        </div>
+        <li class="dropdown-btn-4">
+          <a href="contato.html" ><span class="span-drop">Contato</span></a>
+        </li>
+      </div>
+    </ul>
+</aside>
+ <!--codigo do login-->
+ <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content"  id="limpar1" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Login  <img src="../assets/icon/user-circle.svg" width="30px" height="30px"></h1>
+      <p class="titulo-login">Preencha esse formulário para criar a sua conta!</p>
+      <hr>
+      <label for="text"><b>Nome</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required>
+      <label for="text"><b>Matrícula</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu CG" name="text" required>
+      <label for="psw"><b>Senha</b></label>
+      <input class="input-login" type="password" placeholder="Digite sua senha" name="psw" required>
+      <label>
+        <input class="input-login" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar Senha
+      </label><br>
+      <div class="clearfix">
+        <button id="signbtn" type="button" class="signupbtnLogin">Logar</button>
+        <button  type="button" class="signupbtnCadastro" onclick="document.getElementById('id04').style.display='block'">Cadastrar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--formulario de cadastro-->
+
+<div id="id04" class="modalFormulario">
+  <form class="modal-contentFormulario" id="limpar2" action="#">
+    <div class="container">
+    <h1 class="titulo-login">Formulário de Cadastro <img src="../assets/icon/address-card.svg" width="30px" height="30px"></h1>
+    <p class="titulo-login">Preencha o Formulário</p>
+    <hr>
+    <label for="text"><b>Nome:</b></label><br>
+    <input class="input-formulario" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required><br>
+    <label for="text"><b>Matrícula:</b></label><br>
+    <input class="input-formulario" type="text" placeholder="Digite seu CG" name="text" required><br>
+    <label for="psw"><b>Senha:</b></label><br>
+    <input class="input-formulario" type="password" placeholder="Digite sua senha" name="psw" required><br>
+    <label for="birthday" width="60px" height="40px;"><b>Birthday:</b></label>
+    <input type="date" id="birthday" name="birthday">
+    <label for="cars"style="margin-left: 80px;"><b>Curso Técnico:</b></label>
+    <select name="cars" id="cars">
+      <option value="volvo"> </option>
+      <option value="volvo"> 1º Informática pra internet</option>
+      <option value="saab">2º Informática pra internet</option>
+      <option value="opel">3º Informática pra internet</option>
+    </select><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="clearfix">
+      <button id="botao2" type="button" class="signupbtn">Enviar</button>
+    </div>
+  </div>
+  </form>
+</div>
+<!--i-->
+<div id="id02" class="modalI">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-contentI" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Informação <img src="../assets/icon/exclamation-circle.svg" width="25px" height="25px"> </h1>
+      <p class="titulo-login">Mapa do Site</p>
+      <hr>
+        <ul class="modal-informacao">
+          <li>Home</li>
+          <li>Questionário</li>
+          <li>Sobre Nós
+            <ul style="margin-left: 20px;">  
+              <li>Nossa ideia</li>
+              <li>A equipe</li>
+            </ul>
+          </li>
+          <li>Contato</li>
+        </ul>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn-enviar">Ok Intendi</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--duvida-->
+<div id="id03" class="modalInfo">
+  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-contentInfo" id="limpar" action="#">
+    <div class="container">
+      <h1 class="titulo-login">Qual é a sua dúvidas?</h1>
+      <p class="titulo-login">Conte-nos sobre a sua opinião!</p>
+      <hr>
+      <label for="text"><b>Nome</b></label>
+      <input class="input-login" type="text" placeholder="Digite seu nome" name="text" id="nameuser" required>
+      <label for="text"><b>Senha</b></label>
+      <textarea class="textarea-duvida" name="textarea" rows="8" cols="50" placeholder="Digite a sua duvida" style="background-color: #f1f1f1;"></textarea>
+      <div class="clearfix">
+        <button id="botao" type="button" class="signupbtn"onclick="document.getElementById('id03').style.display='none'" class="cancelbtn-enviar">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>
+   <!--fim dos modais-->
+
+
+   <main>
+    <article>
+      <div class="centro">
+        <div class="boxsb botao folha">
+          <div class="boxcon">
+            <p>25%</p>
+          </div>
+          <div class="boxbottomb">
+            <div class="blink">
+              <a href="nao-urgente.html">Não Urgente</a>
+            </div>
+          </div>
+        </div>
+        <div class="boxsg botao folha">
+          <div class="boxcon">
+            <p>50%</p>
+          </div>
+          <div class="boxbottomg">
+            <div class="glink">
+              <a href="pouco-urgente.html">Pouco Urgente</a>
+            </div>
+          </div>
+        </div>
+        <div class="boxsy botao folha">
+          <div class="boxcon">
+            <p>75%</p>
+          </div>
+          <div class="boxbottomy">
+            <div class="ylink">
+              <a href="urgente.html">Urgente</a>
+            </div>
+          </div>
+        </div>
+        <div class="boxsr botao folha">
+          <div class="boxcon">
+            <p>100%</p>
+          </div>
+          <div class="boxbottomr">
+            <div class="rlink">
+              <a href="emergencia.html">Emergência</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="centro-image3">
+      <div class="centro2">
+        <div class="bottomart">
+          <div class="btitulo">
+            <p><b>Redução de Água e Poluição</b></p>
+          </div>
+          <div class="btxt">
+            <p>Você sabia que a fabricação de papel é um dos processos mais poluentes que existem? Produzir uma tonelada de papel emite mais de 1.5 toneladas de CO2 equivalente. Ou seja, usá-lo menos vai ajudar a reduzir a quantidade de substâncias nocivas na atmosfera.<br>Abolindo o papel do seu escritório, você está consequentemente ajudando a conservar fontes de água. Cada tonelada de papel gera (volume de lixo): 18 kg de poluentes orgânicos descartados nos efluentes; 88 kg de resíduos sólidos (de difícil degradação, como lama de carbonato, rejeito de fibras e lodo primário) que podem causar grandes impactos ao meio ambiente se não forem tratados corretamente.
+              em relação ao impacto ambiental, muitas pessoas associam à extração da madeira, responsável pela celulose, matéria-prima do papel. Porém, há um dado ainda mais alarmante em relação ao ciclo do papel. A cada um quilo de papel produzido, 540 litros de água são utilizados. Ou seja, se uma empresa que consome 600 mil folhas de papel por ano, imprimir os documentos em frente e verso, é possível gerar uma economia 384 mil litros por ano, o equivalente ao abastecimento para 30 famílias no mesmo período.
+              Após a extração da celulose dos troncos, o material passa por diversas etapas de lavagem, cozimento e pressurização, o que corresponde a até 100 mil litros de água. Além disso, para a produção de cada folha de papel A4 são gastos por volta de 10 litros de água. Mas, mais do que alto volume utilizado, a fabricação do papel prejudica os afluentes e córregos no entorno as áreas de extração da celulose.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </article>
+  </main>
+<!--footer-->
+  <footer>
+    <p class="footerText">&copy; 2022 Todos os Direitos Reservados.</p>
+  </footer>
+  <script>
+
+	// login
+	var modal = document.getElementById('id01');
+	modal.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+	 document.getElementById('signbtn').onclick = function (){
+		var user = document.getElementById('nameuser').value;
+		document.getElementById('userlogged').textContent = user;
+		modal.style.display = "none";
+    document.getElementById("limpar1").reset();
+	}
+
+//informação
+  var modalI = document.getElementById('id02');
+	modalI.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalI) {
+		modalI.style.display = "none";
+	  }
+	}
+
+  //duvida
+  var modalInfo = document.getElementById('id03');
+	modalInfo.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalInfo) {
+		modalInfo.style.display = "none";
+    document.getElementById("limpar").reset();
+	  }
+    var botao1 = document.getElementById('botao');
+    botao1.onclick = function(){
+    if (event.target == modalInfo) {
+		modalInfo.style.display = "none";
+	  }
+    alert("A sua duvida foi enviada com sucesso, Nossa equipe entrara em contato");
+    document.getElementById("limpar").reset();
+  }
+
+	}
+
+//formulario de cadastro
+  var  modalFormulario = document.getElementById('id04');
+	modalFormulario.onclick = function(event) {
+		console.log(event);
+	  if (event.target == modalFormulario) {
+      modalFormulario.style.display = "none";
+	  }
+    var botao2 = document.getElementById('botao2');
+    botao2.onclick = function(){
+      if (event.target == modalFormulario) {
+      modalFormulario.style.display = "none";
+	  }
+    alert("Cadastro enviado com sucesso!");
+    document.getElementById("limpar2").reset();
+  }
+	}
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+
+    </script>
+</div>
+</div>
+</body>
+</html>
